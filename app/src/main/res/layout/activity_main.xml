@@ -61,13 +61,6 @@
                 android:ems="10"
                 android:inputType="phone" />
 
-            <Button
-                android:id="@+id/isContactButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Is contact?"
-                tools:layout_editor_absoluteY="72dp" />
-
             <TextView
                 android:id="@+id/isContactTextView"
                 android:layout_width="match_parent"
@@ -77,6 +70,13 @@
         </LinearLayout>
 
     </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/isContactButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Is contact?"
+        tools:layout_editor_absoluteY="72dp" />
 
     <!--<android.support.design.widget.FloatingActionButton-->
         <!--android:id="@+id/fab"-->

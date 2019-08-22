@@ -26,13 +26,6 @@ public class CallListener extends PhonecallReceiver {
         if(contactName == null){
             callMute(ctx);
         }
-//        String contactName = ContactsUtils.retrieveContactName(ctx, number);
-//        AudioManager audiomanager = (AudioManager)ctx.getSystemService(Context.AUDIO_SERVICE);
-//        previous = audiomanager.getRingerMode();
-
-//        if(ContactsUtils.isContact(ctx, number)){
-//            callMute(ctx);
-//        }
     }
 
     private void rollbackAudioConfiguration(Context ctx){
@@ -63,6 +56,7 @@ public class CallListener extends PhonecallReceiver {
     @Override
     protected void onIncomingCallEnded(Context ctx, String number, Date start, Date end)
     {
+        rollbackAudioConfiguration(ctx);
     }
 
     @Override
@@ -80,6 +74,4 @@ public class CallListener extends PhonecallReceiver {
     {
         rollbackAudioConfiguration(ctx);
     }
-
-
 }
